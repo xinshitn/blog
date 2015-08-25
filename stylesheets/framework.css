@@ -3582,6 +3582,7 @@ table tr:hover td{
 .share-bottom{
     position:fixed;
     width:100%;
+	max-width: 980px;
     z-index:99999999999!important;
     background-color:#f8f8f8;
     padding-top:15px;
@@ -3764,23 +3765,23 @@ table tr:hover td{
     color:#FFFFFF;
 }
 
-.google-color{
-    background-color:#d34836;
+.renren-color{
+    background-color:#3498db;
     color:#FFFFFF;
 }
 
-.pinterest-color{
-    background-color:#C92228;
-    color:#FFFFFF;
-}
-
-.sms-color{
+.weixin-color{
     background-color:#27ae60;
     color:#FFFFFF;
 }
 
+.sms-color{
+    background-color:#d35400;
+    color:#FFFFFF;
+}
+
 .mail-color{
-    background-color:#3498db;
+    background-color:#f1c40f;
     color:#FFFFFF;
 }
 
