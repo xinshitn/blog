@@ -17,6 +17,7 @@ Platforms:   Mobile & Tablet
 body{
 	height:100%;
     background-color:#FFFFFF;
+    max-width: 980px;
 }
 
 .disabled{display:none;}
@@ -218,6 +219,7 @@ body{
 .header{
     position:fixed;
     width:100%;
+    max-width: 980px;
     z-index:99999;
     height:60px;
     background-image:url(../images/misc/menu-bg.png)
