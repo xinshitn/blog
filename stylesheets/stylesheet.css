@@ -362,6 +362,7 @@ Full-Width Styles
 
 #main_content {
   padding-top: 40px;
+  height: 200px;
 }
 
 #footer_wrap {
