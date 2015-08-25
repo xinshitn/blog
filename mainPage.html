@@ -7,23 +7,23 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta property="wb:webmaster" content="7a7bf4c0e86fe480"/>
 
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/splash/splash-icon.png">
-    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="images/splash/splash-icon-big.png">
-    <link rel="apple-touch-startup-image" href="images/splash/splash-screen.png"
-          media="screen and (max-device-width: 320px)"/>
-    <link rel="apple-touch-startup-image" href="images/splash/splash-screen@2x.png"
-          media="(max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2)"/>
-    <link rel="apple-touch-startup-image" href="images/splash/splash-screen-six.png" media="(device-width: 375px)">
-    <link rel="apple-touch-startup-image" href="images/splash/splash-screen-six-plus.png" media="(device-width: 414px)">
-    <link rel="apple-touch-startup-image" sizes="640x1096" href="images/splash/splash-screen@3x.png"/>
-    <link rel="apple-touch-startup-image" sizes="1024x748" href="images/splash/splash-screen-ipad-landscape"
-          media="screen and (min-device-width : 481px) and (max-device-width : 1024px) and (orientation : landscape)"/>
-    <link rel="apple-touch-startup-image" sizes="768x1004" href="images/splash/splash-screen-ipad-portrait.png"
-          media="screen and (min-device-width : 481px) and (max-device-width : 1024px) and (orientation : portrait)"/>
-    <link rel="apple-touch-startup-image" sizes="1536x2008" href="images/splash/splash-screen-ipad-portrait-retina.png"
-          media="(device-width: 768px)	and (orientation: portrait)	and (-webkit-device-pixel-ratio: 2)"/>
-    <link rel="apple-touch-startup-image" sizes="1496x2048" href="images/splash/splash-screen-ipad-landscape-retina.png"
-          media="(device-width: 768px)	and (orientation: landscape)	and (-webkit-device-pixel-ratio: 2)"/>
+    <!--<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/splash/splash-icon.png">-->
+    <!--<link rel="apple-touch-icon-precomposed" sizes="180x180" href="images/splash/splash-icon-big.png">-->
+    <!--<link rel="apple-touch-startup-image" href="images/splash/splash-screen.png"-->
+    <!--media="screen and (max-device-width: 320px)"/>-->
+    <!--<link rel="apple-touch-startup-image" href="images/splash/splash-screen@2x.png"-->
+    <!--media="(max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2)"/>-->
+    <!--<link rel="apple-touch-startup-image" href="images/splash/splash-screen-six.png" media="(device-width: 375px)">-->
+    <!--<link rel="apple-touch-startup-image" href="images/splash/splash-screen-six-plus.png" media="(device-width: 414px)">-->
+    <!--<link rel="apple-touch-startup-image" sizes="640x1096" href="images/splash/splash-screen@3x.png"/>-->
+    <!--<link rel="apple-touch-startup-image" sizes="1024x748" href="images/splash/splash-screen-ipad-landscape"-->
+    <!--media="screen and (min-device-width : 481px) and (max-device-width : 1024px) and (orientation : landscape)"/>-->
+    <!--<link rel="apple-touch-startup-image" sizes="768x1004" href="images/splash/splash-screen-ipad-portrait.png"-->
+    <!--media="screen and (min-device-width : 481px) and (max-device-width : 1024px) and (orientation : portrait)"/>-->
+    <!--<link rel="apple-touch-startup-image" sizes="1536x2008" href="images/splash/splash-screen-ipad-portrait-retina.png"-->
+    <!--media="(device-width: 768px)	and (orientation: portrait)	and (-webkit-device-pixel-ratio: 2)"/>-->
+    <!--<link rel="apple-touch-startup-image" sizes="1496x2048" href="images/splash/splash-screen-ipad-landscape-retina.png"-->
+    <!--media="(device-width: 768px)	and (orientation: landscape)	and (-webkit-device-pixel-ratio: 2)"/>-->
 
     <title>清汀驿站</title>
 
@@ -38,6 +38,7 @@
     <script type="text/javascript" src="http://apps.bdimg.com/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
     <!--<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>-->
     <!--<script src="http://connect.qq.com/widget/loader/loader.js" widget="shareqq" charset="utf-8"></script>-->
+    <script type="text/javascript" src="http://widget.renren.com/js/rrshare.js"></script>
     <script type="text/javascript" src="javascripts/framework.plugins.js"></script>
     <script type="text/javascript" src="javascripts/custom.js"></script>
 
@@ -79,7 +80,20 @@
             }
             window.open("http://connect.qq.com/widget/shareqq/index.html?" + s.join('&'));
         }
+        function shareRenren() {
+            var rrShareParam = {
+                resourceUrl: '',	//分享的资源Url
+                srcUrl: '',	//分享的资源来源Url,默认为header中的Referer,如果分享失败可以调整此值为resourceUrl试试
+                pic: '',		//分享的主题图片Url
+                title: '清汀驿站',		//分享的标题
+                description: '一个很神奇的个人网站'	//分享的详细描述
+            };
+            rrShareOnclick(rrShareParam);
+        }
+
     </script>
+
+
 </head>
 
 <body>
@@ -481,9 +495,9 @@
             <i class="fa fa-qq qq-color"></i>
             QQ
         </a>
-        <a href="http://sc.chinaz.com/">
+        <a href="#" onclick="shareRenren();">
             <i class="fa fa-google-plus google-color"></i>
-            Google
+            Renren
         </a>
 
         <a href="http://sc.chinaz.com/">
