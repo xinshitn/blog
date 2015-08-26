@@ -35,6 +35,18 @@
     <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="http://apps.bdimg.com/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
     <script type="text/javascript" src="javascripts/framework.plugins.js"></script>
+
+
+    <script type="text/javascript">
+        function iniFun($) {
+            if (getExplorer() == "Safari") {
+                if (win_width >= 980) {
+                    $(".header").css("left", win_width / 2 - 490);
+                    $(".share-bottom").css("left", win_width / 2 - 490);
+                }
+            }
+        }
+    </script>
     <script type="text/javascript" src="javascripts/custom.js"></script>
 
 </head>
