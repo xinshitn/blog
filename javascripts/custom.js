@@ -1,5 +1,5 @@
 // JavaScript Document
-
+var win_width;
 (function ($) {
 
     $(window).load(function () {
@@ -8,9 +8,8 @@
     });
 
     $(document).ready(function () {
-
-        iniFun();//初始化执行的方法
-        var win_width = $(window).width();
+        win_width = $(window).width();
+        iniFun($);//初始化执行的方法
         if (win_width >= 980) {
             $("#mainDiv").css("left", win_width / 2 - 490);
         }
@@ -585,3 +584,28 @@
     });
 
 }(jQuery));
+
+//浏览器判断
+function getExplorer() {
+    var explorer = window.navigator.userAgent;
+//ie
+    if (explorer.indexOf("MSIE") >= 0) {
+        return "ie";
+    }
+//firefox
+    else if (explorer.indexOf("Firefox") >= 0) {
+        return "Firefox";
+    }
+//Chrome
+    else if (explorer.indexOf("Chrome") >= 0) {
+        return "Chrome";
+    }
+//Opera
+    else if (explorer.indexOf("Opera") >= 0) {
+        return "Opera";
+    }
+//Safari
+    else if (explorer.indexOf("Safari") >= 0) {
+        return "Safari";
+    }
+}

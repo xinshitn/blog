@@ -1,5 +1,4 @@
 <!DOCTYPE HTML>
-<!--<html xmlns:wb="http://open.weibo.com/wb">-->
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0 minimal-ui"/>
@@ -43,7 +42,18 @@
     <script type="text/javascript" src="javascripts/custom.js"></script>
 
     <script type="text/javascript">
-        function iniFun() {
+        function iniFun($) {
+            if (getExplorer() == "Safari") {
+                $(".header").css("left", win_width / 2 - 490);
+                $(".share-bottom").css("left", win_width / 2 - 490);
+            }
+
+            $("#code_img").css("left", win_width / 2 - 100);
+            $('#qcode').hover(function () {
+                $('#code_img').show();
+            }, function () {
+                $('#code_img').hide();
+            });
         }
         function shareEmail() {
             var p = {
@@ -91,7 +101,6 @@
             rrShareOnclick(rrShareParam);
 //            http://widget.renren.com/dialog/share?resourceUrl=http%3A%2F%2Fnews.163.com%2Fapi%2F15%2F0824%2F10%2FB1PCL9S200014AEE.html%23sns_renren&title=女孩溺亡尸体器官丢失%20警方%3A船只螺旋桨搅动所致_网易新闻中心&images=
         }
-
     </script>
 
 
@@ -487,13 +496,17 @@
             <a href="http://sighttp.qq.com/authd?IDKEY=34161cc36629372578e4f628df7cd567924fb4e1fba9336a" target="_blank"
                class="footer-QQ"><i class="fa fa-qq"></i></a>
             <a href="http://weibo.com/52131420" target="_blank" class="footer-weibo"><i class="fa fa-weibo"></i></a>
-            <a href="http://cli.im/api/qrcode" target="_blank" class="footer-share"><i class="fa fa-weixin"></i></a>
+            <a href="images/pictures/tiann200.png" target="_blank" id="qcode" class="footer-share"><i
+                    class="fa fa-weixin"></i></a>
             <a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=4paMi4yFopSLksyTk8yBjY8"
                class="footer-email"><i class="fa fa-envelope-o"></i></a>
             <!--<a href="#" class="footer-share show-share-bottom"><i class="fa fa-at"></i></a>-->
             <a href="#" class="footer-up"><i class="fa fa-angle-up"></i></a>
         </div>
         <p class="center-text"></p>
+
+        <!--二维码框-->
+        <div id="code_img"></div>
         <!--<p class="center-text">Copyright 2015. All rights reserved.</p>-->
     </div>
 
@@ -502,7 +515,8 @@
         <h3>分享页面</h3>
 
         <div class="share-socials-bottom">
-            <a title="微博" href="http://service.weibo.com/share/share.php?url=http%3A%2F%2Flocalhost%3A63342%2Fblog%2FmainPage.html&type=icon&ralateUid=1068495385&language=zh_cn&appkey=4045697247&title=%E4%B8%80%E4%B8%AA%E5%BE%88%E7%A5%9E%E5%A5%87%E7%9A%84%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99&searchPic=false&style=simple"
+            <a title="微博"
+               href="http://service.weibo.com/share/share.php?url=http%3A%2F%2Flocalhost%3A63342%2Fblog%2FmainPage.html&type=icon&ralateUid=1068495385&language=zh_cn&appkey=4045697247&title=%E4%B8%80%E4%B8%AA%E5%BE%88%E7%A5%9E%E5%A5%87%E7%9A%84%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99&searchPic=false&style=simple"
                target="_blank">
                 <i class="fa fa-weibo weibo-color"></i>
                 <!--Weibo-->
@@ -512,7 +526,7 @@
                 <i class="fa fa-qq qq-color"></i>
                 <!--QQ-->
             </a>
-            <a title="微信" href="http://cli.im/api/qrcode">
+            <a title="微信" target="_blank" href="http://cli.im/api/qrcode">
                 <i class="fa fa-weixin weixin-color"></i>
                 <!--Weixin-->
             </a>
@@ -533,11 +547,5 @@
         <a href="#" class="close-share-bottom">关闭</a>
     </div>
     <div class="menu-wrapper-background"></div>
-    <!--<div style="display: none;">-->
-    <!--<wb:share-button id="wbshare" appkey="4045697247" addition="simple" type="icon" ralateUid="1068495385" default_text="一个很神奇的个人网站" picture_search="false">-->
-    <!--</wb:share-button>-->
-    <!--</div>-->
 </div>
 </body>
-
-<!--</html>-->
