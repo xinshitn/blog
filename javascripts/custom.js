@@ -21,7 +21,7 @@ var win_width;
             $('.menu-wrapper-background').fadeIn(250);
             $('body').css("overflow", 'hidden');
             //document.getElementById('myMainDiv').addEventListener('touchmove',noMove,false);
-            $('[name=noScroll]').bing('touchmove',noMove);
+            $('.noScroll').bing('touchmove',noMove);
             return false;
         });
 
