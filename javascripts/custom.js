@@ -17,6 +17,7 @@ var win_width;
         $('.show-navigation').click(function () {
             $('.menu-top').toggleClass('show-menus');
             $('.menu-wrapper-background').fadeIn(250);
+            $('body').css("overflow", 'hidden');
             return false;
         });
 
