@@ -55,7 +55,7 @@ body {
 .menu-top {
     position: fixed !important;
     z-index: 999999999;
-    max-height: 429px;
+    max-height: 428px;
     width: 300px !important;
     left: 50%;
     margin-left: -150px;
