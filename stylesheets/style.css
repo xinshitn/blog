@@ -100,7 +100,7 @@ body {
     z-index: 99999999;
     height: 100%;
     top: -500px;
-    overflow-y: auto !important;
+    overflow-y: scroll !important;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch !important;
     transition: all 350ms ease;
