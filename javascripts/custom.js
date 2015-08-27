@@ -3,6 +3,7 @@ var win_width;
 (function ($) {
 
     $(window).load(function () {
+        $('.noScroll').bind('touchmove',noMove);
         $("#status").fadeOut(); // will first fade out the loading animation
         $("#preloader").delay(400).fadeOut("slow"); // will fade out the white DIV that covers the website.
     });
@@ -20,8 +21,6 @@ var win_width;
             $('.menu-top').toggleClass('show-menus');
             $('.menu-wrapper-background').fadeIn(250);
             $('body').css("overflow", 'hidden');
-            //document.getElementById('myMainDiv').addEventListener('touchmove',noMove,false);
-            $('.noScroll').bind('touchmove',noMove);
             return false;
         });
 
@@ -29,8 +28,6 @@ var win_width;
             $('.menu-top').toggleClass('show-menus');
             $('.menu-wrapper-background').fadeOut(250);
             $('body').css("overflow", 'auto');
-            //document.getElementById('myMainDiv').removeEventListener('touchmove',noMove,false);
-            //$('#myMainDiv').unbing('touchmove',noMove);
             return false;
         });
 
