@@ -206,38 +206,39 @@
 
     <!-- Share Elements-->
     <div class="share-bottom">
-        <h3>Share Page</h3>
+        <h3>分享页面</h3>
 
         <div class="share-socials-bottom">
-            <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.themeforest.net/">
-                <i class="fa fa-facebook facebook-color"></i>
-                Facebook
-            </a>
-            <a href="https://twitter.com/home?status=Check%20out%20ThemeForest%20http://www.themeforest.net">
-                <i class="fa fa-twitter twitter-color"></i>
-                Twitter
-            </a>
-            <a href="https://plus.google.com/share?url=http://www.themeforest.net">
-                <i class="fa fa-google-plus google-color"></i>
-                Google
+            <a title="微博" onclick="shareWeibo('在这里遇见你');" href="#" target="_blank">
+                <i class="fa fa-weibo weibo-color"></i>
+                <!--Weibo-->
             </a>
 
-            <a href="https://pinterest.com/pin/create/button/?url=http://www.themeforest.net/&media=https://0.s3.envato.com/files/63790821/profile-image.jpg&description=Themes%20and%20Templates">
-                <i class="fa fa-pinterest-p pinterest-color"></i>
-                Pinterest
+            <a href="#" onclick="shareQQ('在这里遇见你','就那么一个普通的人的普通网站');" title="QQ">
+                <i class="fa fa-qq qq-color"></i>
+                <!--QQ-->
             </a>
-            <a href="sms:">
+            <a title="微信" target="_blank" href="http://cli.im/api/qrcode">
+                <i class="fa fa-weixin weixin-color"></i>
+                <!--Weixin-->
+            </a>
+
+            <a title="人人" href="#" onclick="shareRenren('清汀驿站','');">
+                <i class="fa fa-renren renren-color"></i>
+                <!--Renren-->
+            </a>
+            <a title="短信(限手机)" href="sms:13148383640">
                 <i class="fa fa-comment-o sms-color"></i>
-                Text
+                <!--Text-->
             </a>
-            <a href="mailto:?&subject=Check this page out!&body=http://www.themeforest.net">
+            <a title="邮件" onclick="shareEmail('在这里遇见你','就那么一个普通的人的普通网站');" href="#">
                 <i class="fa fa-envelope-o mail-color"></i>
-                Email
+                <!--Email-->
             </a>
         </div>
-        <a href="#" class="close-share-bottom">Close</a>
+        <a href="#" class="close-share-bottom">关闭</a>
     </div>
-    <div class="menu-wrapper-background"></div>
+    <div class="menu-wrapper-background noScroll"></div>
 </div>
 
 </body>

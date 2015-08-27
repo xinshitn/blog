@@ -618,3 +618,79 @@ function getExplorer() {
         return "Safari";
     }
 }
+
+/*各类分享功能*/
+function shareWeibo(title) {
+    var p = {
+        url: location.href,
+        type: 'icon',
+        ralateUid: '1068495385',
+        language: 'zh_cn',
+        appkey: '4045697247',
+        title: title + '-清汀驿站',
+        searchPic: 'false',
+        style: 'simple'
+    };
+    var s = [];
+    for (var i in p) {
+        s.push(i + '=' + encodeURIComponent(p[i] || ''));
+    }
+    window.open("http://service.weibo.com/share/share.php?" + s.join("&"));
+}
+function shareEmail(title, summary) {
+    var p = {
+        url: location.href,
+        to: 'qqmail',
+        desc: '一个很神奇的个人网站', /*默认分享理由(可选)*/
+        summary: summary, /*摘要(可选)*/
+        title: title + '-清汀驿站', /*分享标题(可选)*/
+        site: '', /*分享来源 如：腾讯网(可选)*/
+        pics: '' /*分享图片的路径(可选)*/
+    };
+    var s = [];
+    for (var i in p) {
+        s.push(i + '=' + encodeURIComponent(p[i] || ''));
+    }
+    window.open("http://mail.qq.com/cgi-bin/qm_share?" + s.join("&"));
+}
+function shareQQ(title, summary) {
+    var p = {
+        url: location.href, /*获取URL，可加上来自分享到QQ标识，方便统计*/
+        desc: '一个很神奇的个人网站', /*分享理由(风格应模拟用户对话),支持多分享语随机展现（使用|分隔）*/
+        title: title + '-清汀驿站', /*分享标题(可选)*/
+        summary: summary, /*分享摘要(可选)*/
+        pics: '', /*分享图片(可选)*/
+        flash: '', /*视频地址(可选)*/
+        site: 'QQ分享', /*分享来源(可选) 如：QQ分享*/
+        style: '203',
+        width: 16,
+        height: 16
+    };
+    var s = [];
+    for (var i in p) {
+        s.push(i + '=' + encodeURIComponent(p[i] || ''));
+    }
+    window.open("http://connect.qq.com/widget/shareqq/index.html?" + s.join('&'));
+}
+function shareRenren(title, description) {
+    //var rrShareParam = {
+    //    resourceUrl: '',	//分享的资源Url
+    //    srcUrl: '',	//分享的资源来源Url,默认为header中的Referer,如果分享失败可以调整此值为resourceUrl试试
+    //    pic: '',		//分享的主题图片Url
+    //    title: '清汀驿站',		//分享的标题
+    //    description: '一个很神奇的个人网站'	//分享的详细描述
+    //};
+    //rrShareOnclick(rrShareParam);
+//            http://widget.renren.com/dialog/share?resourceUrl=http%3A%2F%2Fnews.163.com%2Fapi%2F15%2F0824%2F10%2FB1PCL9S200014AEE.html%23sns_renren&title=女孩溺亡尸体器官丢失%20警方%3A船只螺旋桨搅动所致_网易新闻中心&images=
+    var p = {
+        resourceUrl: location.href,
+        title: title, /*分享理由(风格应模拟用户对话),支持多分享语随机展现（使用|分隔）*/
+        description: description,
+        images: ''
+    };
+    var s = [];
+    for (var i in p) {
+        s.push(i + '=' + encodeURIComponent(p[i] || ''));
+    }
+    window.open("http://widget.renren.com/dialog/share?" + s.join('&'));
+}
