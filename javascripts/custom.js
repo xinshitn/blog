@@ -24,6 +24,7 @@ var win_width;
         $('.close-menu, .menu-wrapper-background').click(function () {
             $('.menu-top').toggleClass('show-menus');
             $('.menu-wrapper-background').fadeOut(250);
+            $('body').css("overflow", 'auto');
             return false;
         });
 
