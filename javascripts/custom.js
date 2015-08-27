@@ -7,7 +7,6 @@ var win_width;
         $("#preloader").delay(400).fadeOut("slow"); // will fade out the white DIV that covers the website.
     });
     function noMove(e){
-        alert(1);
         e.preventDefault();
     }
     $(document).ready(function () {
@@ -21,7 +20,7 @@ var win_width;
             $('.menu-top').toggleClass('show-menus');
             $('.menu-wrapper-background').fadeIn(250);
             $('body').css("overflow", 'hidden');
-            document.addEventListener('touchmove',noMove,false);
+            document.getElementById('myMainDiv').addEventListener('touchmove',noMove,false);
             return false;
         });
 
@@ -29,6 +28,7 @@ var win_width;
             $('.menu-top').toggleClass('show-menus');
             $('.menu-wrapper-background').fadeOut(250);
             $('body').css("overflow", 'auto');
+            document.getElementById('myMainDiv').removeEventListener('touchmove',noMove,false);
             return false;
         });
 
