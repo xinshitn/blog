@@ -6,7 +6,9 @@ var win_width;
         $("#status").fadeOut(); // will first fade out the loading animation
         $("#preloader").delay(400).fadeOut("slow"); // will fade out the white DIV that covers the website.
     });
-
+    function test(e){
+        e.preventDefault();
+    }
     $(document).ready(function () {
         win_width = $(window).width();
         iniFun($);//初始化执行的方法
@@ -18,6 +20,7 @@ var win_width;
             $('.menu-top').toggleClass('show-menus');
             $('.menu-wrapper-background').fadeIn(250);
             $('body').css("overflow", 'hidden');
+            document.addEventListener('touchmove',test,false);
             return false;
         });
 
