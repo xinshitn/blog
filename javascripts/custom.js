@@ -20,7 +20,8 @@ var win_width;
             $('.menu-top').toggleClass('show-menus');
             $('.menu-wrapper-background').fadeIn(250);
             $('body').css("overflow", 'hidden');
-            document.getElementById('myMainDiv').addEventListener('touchmove',noMove,false);
+            //document.getElementById('myMainDiv').addEventListener('touchmove',noMove,false);
+            //$('#myMainDiv').bing('touchmove',noMove);
             return false;
         });
 
@@ -28,7 +29,8 @@ var win_width;
             $('.menu-top').toggleClass('show-menus');
             $('.menu-wrapper-background').fadeOut(250);
             $('body').css("overflow", 'auto');
-            document.getElementById('myMainDiv').removeEventListener('touchmove',noMove,false);
+            //document.getElementById('myMainDiv').removeEventListener('touchmove',noMove,false);
+            //$('#myMainDiv').unbing('touchmove',noMove);
             return false;
         });
 
