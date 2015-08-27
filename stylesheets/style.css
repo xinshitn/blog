@@ -17,6 +17,7 @@ body {
     height: 100%;
     background-color: #FFFFFF;
     max-width: 980px;
+    overflow: hidden;
 }
 
 .disabled {
