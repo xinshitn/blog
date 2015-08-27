@@ -6,7 +6,8 @@ var win_width;
         $("#status").fadeOut(); // will first fade out the loading animation
         $("#preloader").delay(400).fadeOut("slow"); // will fade out the white DIV that covers the website.
     });
-    function test(e){
+    function noMove(e){
+        alert(1);
         e.preventDefault();
     }
     $(document).ready(function () {
@@ -20,7 +21,7 @@ var win_width;
             $('.menu-top').toggleClass('show-menus');
             $('.menu-wrapper-background').fadeIn(250);
             $('body').css("overflow", 'hidden');
-            document.addEventListener('touchmove',test,false);
+            document.addEventListener('touchmove',noMove,false);
             return false;
         });
 
