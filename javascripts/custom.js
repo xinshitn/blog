@@ -5,21 +5,25 @@ var win_width;
     $(window).load(function () {
         $("#status").fadeOut(); // will first fade out the loading animation
         $("#preloader").delay(400).fadeOut("slow"); // will fade out the white DIV that covers the website.
-        $('.noScroll').bind('touchmove',noMove);
     });
-    function noMove(e){
+    function noMove(e) {
         e.preventDefault();
     }
+
     $(document).ready(function () {
         win_width = $(window).width();
         iniFun($);//初始化执行的方法
         if (win_width >= 980) {
             $("#mainDiv").css("left", win_width / 2 - 490);
         }
+        if (getExplorer() == "ie") {
+            $(".menu-top").css("max-height", "429px");
+        }
         //Top Menu
         $('.show-navigation').click(function () {
             $('.menu-top').toggleClass('show-menus');
             $('.menu-wrapper-background').fadeIn(250);
+            $('.noScroll').bind('touchmove', noMove);
             $('body').css("overflow", 'hidden');
             return false;
         });
