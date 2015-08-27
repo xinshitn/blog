@@ -12,6 +12,10 @@ var win_width;
 
     $(document).ready(function () {
         win_width = $(window).width();
+        if (win_width >= 980) {
+            $(".header").css("left", win_width / 2 - 490);
+            $(".share-bottom").css("left", win_width / 2 - 490);
+        }
         iniFun($);//初始化执行的方法
         if (win_width >= 980) {
             $("#mainDiv").css("left", win_width / 2 - 490);

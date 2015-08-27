@@ -23,7 +23,7 @@
     <link rel="apple-touch-startup-image" sizes="1496x2048" href="images/splash/splash-screen-ipad-landscape-retina.png"
           media="(device-width: 768px)	and (orientation: landscape)	and (-webkit-device-pixel-ratio: 2)"/>
 
-    <title>Epsilon Mobile Framework - Version 2.0</title>
+    <title>清汀驿站</title>
 
     <link href="stylesheets/style.css" rel="stylesheet" type="text/css">
     <link href="stylesheets/framework.css" rel="stylesheet" type="text/css">
@@ -37,12 +37,6 @@
     <script type="text/javascript" src="javascripts/framework.plugins.js"></script>
     <script type="text/javascript">
         function iniFun($) {
-            if (getExplorer() == "Safari") {
-                if (win_width >= 980) {
-                    $(".header").css("left", win_width / 2 - 490);
-                    $(".share-bottom").css("left", win_width / 2 - 490);
-                }
-            }
             var item = $(".decoration");
             for (var i in item) {
                 if (i % 2 == 1) {
