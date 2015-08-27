@@ -684,7 +684,7 @@ function shareRenren(title, description) {
 //            http://widget.renren.com/dialog/share?resourceUrl=http%3A%2F%2Fnews.163.com%2Fapi%2F15%2F0824%2F10%2FB1PCL9S200014AEE.html%23sns_renren&title=女孩溺亡尸体器官丢失%20警方%3A船只螺旋桨搅动所致_网易新闻中心&images=
     var p = {
         resourceUrl: location.href,
-        title: title, /*分享理由(风格应模拟用户对话),支持多分享语随机展现（使用|分隔）*/
+        title: title + '-清汀驿站',
         description: description,
         images: ''
     };
