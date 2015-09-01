@@ -16,7 +16,7 @@ body input[type="text"],body input[type="submit"],body textarea,body input[type=
 }
 /*------ HEADERBG STARTS---------*/
 .headerbg{
-	background: url(../../images/resume/bannerbg.jpg);
+	background: url(http://tiannblog.oss-cn-shanghai.aliyuncs.com/images/resume/bannerbg.jpg);
 	min-height:700px;
 	width:100%;
 	background-size:cover;
@@ -99,7 +99,7 @@ body input[type="text"],body input[type="submit"],body textarea,body input[type=
 a.downarrow  span{
  	height:48px;
     width:48px;
-    background:url(../../images/resume/down.png);
+    background:url(http://tiannblog.oss-cn-shanghai.aliyuncs.com/images/resume/down.png);
     display:inline-block;
 }
 a.downarrow{
@@ -170,7 +170,7 @@ a.downarrow{
 .arrow span{
 	height:48px;
 	width:48px;
-	background:url(../../images/resume/bwn.png);
+	background:url(http://tiannblog.oss-cn-shanghai.aliyuncs.com/images/resume/bwn.png);
 	display:inline-block;
 }
 a.arrow{
@@ -217,7 +217,7 @@ a.arrow{
 .down span{
 	height:48px;
 	width:48px;
-	background:url(../../images/resume/bwn.png);
+	background:url(http://tiannblog.oss-cn-shanghai.aliyuncs.com/images/resume/bwn.png);
 	display:inline-block;
 }
 a.down{
@@ -269,7 +269,7 @@ a.down{
 a.rightarrow  span{
 	height:30px;
 	width:30.5px;
-	background:url(../../images/resume/rightarw.png);
+	background:url(http://tiannblog.oss-cn-shanghai.aliyuncs.com/images/resume/rightarw.png);
 	display:inline-block;
 }
 a.rightarrow{
@@ -279,7 +279,7 @@ a.rightarrow{
 .portdown span{
 	height:48px;
 	width:48px;
-	background:url(../../images/resume/bwn.png);
+	background:url(http://tiannblog.oss-cn-shanghai.aliyuncs.com/images/resume/bwn.png);
 	display:inline-block;
 	}
 a.portdown{
@@ -288,7 +288,7 @@ a.portdown{
 	}
 /*------FOOTER STARTS---------*/
 .footer{
-	background: url(../../images/resume/footerbg.jpg);
+	background: url(http://tiannblog.oss-cn-shanghai.aliyuncs.com/images/resume/footerbg.jpg);
 	position: relative;
 	min-height: 567px;
 	background-size: cover;
@@ -378,7 +378,7 @@ a.portdown{
 .up span{
 	height:48px;
 	width:48px;
-	background:url(../../images/resume/up.png);
+	background:url(http://tiannblog.oss-cn-shanghai.aliyuncs.com/images/resume/up.png);
 	margin-top:2em;
 	display:inline-block;
 }
