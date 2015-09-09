@@ -17,7 +17,7 @@ body{background:url(../../images/beige_paper.png) left top repeat;}
 .list{
 	width:100%;
 	height:auto;
-	margin-top:50px;
+	/*margin-top:50px;*/
 }
 .list li{
 	width:500px;
@@ -134,7 +134,7 @@ body{background:url(../../images/beige_paper.png) left top repeat;}
 }
 
 #fancyClock{
-	margin:40px auto;
+	margin:15px auto;
 	height:200px;
 	width:600px;
 	border:1px solid #111111;
