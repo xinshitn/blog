@@ -1,49 +1,49 @@
 <!DOCTYPE html>
-<html>
+<!--<html>-->
 
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="渺之暮雨 : 记-心-憩">
-    <meta property="wb:webmaster" content="7a7bf4c0e86fe480" />
+<!--<head>-->
+    <!--<meta charset='utf-8'>-->
+    <!--<meta http-equiv="X-UA-Compatible" content="chrome=1">-->
+    <!--<meta name="description" content="渺之暮雨 : 记-心-憩">-->
+    <!--<meta property="wb:webmaster" content="7a7bf4c0e86fe480"/>-->
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <!--<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">-->
 
-    <title>渺之暮雨</title>
-</head>
+    <!--<title>渺之暮雨</title>-->
+<!--</head>-->
 
-<body>
+<!--<body>-->
 
-<!-- HEADER -->
-<div id="header_wrap" class="outer">
-    <header class="inner">
-        <h1 id="project_title">渺之暮雨</h1>
-        <!--<h2 id="project_tagline">记-心-憩</h2>-->
+<!--&lt;!&ndash; HEADER &ndash;&gt;-->
+<!--<div id="header_wrap" class="outer">-->
+    <!--<header class="inner">-->
+        <!--<h1 id="project_title">渺之暮雨</h1>-->
+        <!--&lt;!&ndash;<h2 id="project_tagline">记-心-憩</h2>&ndash;&gt;-->
 
-        <!--<section id="downloads">-->
-        <!--<a class="zip_download_link" href="https://github.com/xinshitn/blog/zipball/master">Download this project as a .zip file</a>-->
-        <!--<a class="tar_download_link" href="https://github.com/xinshitn/blog/tarball/master">Download this project as a tar.gz file</a>-->
-        <!--</section>-->
-    </header>
-</div>
+        <!--&lt;!&ndash;<section id="downloads">&ndash;&gt;-->
+        <!--&lt;!&ndash;<a class="zip_download_link" href="https://github.com/xinshitn/blog/zipball/master">Download this project as a .zip file</a>&ndash;&gt;-->
+        <!--&lt;!&ndash;<a class="tar_download_link" href="https://github.com/xinshitn/blog/tarball/master">Download this project as a tar.gz file</a>&ndash;&gt;-->
+        <!--&lt;!&ndash;</section>&ndash;&gt;-->
+    <!--</header>-->
+<!--</div>-->
 
-<!-- MAIN CONTENT -->
-<div id="main_content_wrap" class="outer">
-    <section id="main_content" class="inner">
-        <h3>所有的一切,在这里碰撞...</h3>
+<!--&lt;!&ndash; MAIN CONTENT &ndash;&gt;-->
+<!--<div id="main_content_wrap" class="outer">-->
+    <!--<section id="main_content" class="inner">-->
+        <!--<h3>所有的一切,在这里碰撞...</h3>-->
 
-        <a class="anchor" href="mainPage.html" aria-hidden="true"><span
-                class="octicon octicon-link">点击进入清汀驿站 >>></span></a>
+        <!--<a class="anchor" href="mainPage.html" aria-hidden="true"><span-->
+                <!--class="octicon octicon-link">点击进入清汀驿站 >>></span></a>-->
 
-    </section>
-</div>
+    <!--</section>-->
+<!--</div>-->
 
 <!-- FOOTER  -->
-<div id="footer_wrap" class="outer">
-    <footer class="inner">
-        <p class="copyright">Maintained By <a href="https://github.com/xinshitn">tiann</a></p>
-    </footer>
-</div>
+<!--<div id="footer_wrap" class="outer">-->
+    <!--<footer class="inner">-->
+        <!--<p class="copyright">Maintained By <a href="https://github.com/xinshitn">tiann</a></p>-->
+    <!--</footer>-->
+<!--</div>-->
 
 <script type="text/javascript">
     var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
@@ -55,8 +55,27 @@
         pageTracker._trackPageview();
     } catch (err) {
     }
+    window.onload = function () {
+        if (IsPC()) {
+            location.replace("indexPc.html");
+        } else {
+            location.replace("indexPhone.html");
+        }
+    }
+    function IsPC() {
+        var userAgentInfo = navigator.userAgent;
+        var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");
+        var flag = true;
+        for (var v = 0; v < Agents.length; v++) {
+            if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                flag = false;
+                break;
+            }
+        }
+        return flag;
+    }
 </script>
 
 
-</body>
-</html>
+<!--</body>-->
+<!--</html>-->
