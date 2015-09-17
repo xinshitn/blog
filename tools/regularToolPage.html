@@ -6,22 +6,35 @@
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://tiannblog.oss-cn-shanghai.aliyuncs.com/images/splash/splash-icon.png">
-    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="http://tiannblog.oss-cn-shanghai.aliyuncs.com/images/splash/splash-icon-big.png">
-    <link rel="apple-touch-startup-image" href="http://tiannblog.oss-cn-shanghai.aliyuncs.com/images/splash/splash-screen.png"
+    <link rel="apple-touch-icon-precomposed" sizes="114x114"
+          href="http://tiannblog.oss-cn-shanghai.aliyuncs.com/images/splash/splash-icon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180"
+          href="http://tiannblog.oss-cn-shanghai.aliyuncs.com/images/splash/splash-icon-big.png">
+    <link rel="apple-touch-startup-image"
+          href="http://tiannblog.oss-cn-shanghai.aliyuncs.com/images/splash/splash-screen.png"
           media="screen and (max-device-width: 320px)"/>
-    <link rel="apple-touch-startup-image" href="http://tiannblog.oss-cn-shanghai.aliyuncs.com/images/splash/splash-screen@2x.png"
+    <link rel="apple-touch-startup-image"
+          href="http://tiannblog.oss-cn-shanghai.aliyuncs.com/images/splash/splash-screen@2x.png"
           media="(max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2)"/>
-    <link rel="apple-touch-startup-image" href="http://tiannblog.oss-cn-shanghai.aliyuncs.com/images/splash/splash-screen-six.png" media="(device-width: 375px)">
-    <link rel="apple-touch-startup-image" href="http://tiannblog.oss-cn-shanghai.aliyuncs.com/images/splash/splash-screen-six-plus.png" media="(device-width: 414px)">
-    <link rel="apple-touch-startup-image" sizes="640x1096" href="http://tiannblog.oss-cn-shanghai.aliyuncs.com/images/splash/splash-screen@3x.png"/>
-    <link rel="apple-touch-startup-image" sizes="1024x748" href="http://tiannblog.oss-cn-shanghai.aliyuncs.com/images/splash/splash-screen-ipad-landscape"
+    <link rel="apple-touch-startup-image"
+          href="http://tiannblog.oss-cn-shanghai.aliyuncs.com/images/splash/splash-screen-six.png"
+          media="(device-width: 375px)">
+    <link rel="apple-touch-startup-image"
+          href="http://tiannblog.oss-cn-shanghai.aliyuncs.com/images/splash/splash-screen-six-plus.png"
+          media="(device-width: 414px)">
+    <link rel="apple-touch-startup-image" sizes="640x1096"
+          href="http://tiannblog.oss-cn-shanghai.aliyuncs.com/images/splash/splash-screen@3x.png"/>
+    <link rel="apple-touch-startup-image" sizes="1024x748"
+          href="http://tiannblog.oss-cn-shanghai.aliyuncs.com/images/splash/splash-screen-ipad-landscape"
           media="screen and (min-device-width : 481px) and (max-device-width : 1024px) and (orientation : landscape)"/>
-    <link rel="apple-touch-startup-image" sizes="768x1004" href="http://tiannblog.oss-cn-shanghai.aliyuncs.com/images/splash/splash-screen-ipad-portrait.png"
+    <link rel="apple-touch-startup-image" sizes="768x1004"
+          href="http://tiannblog.oss-cn-shanghai.aliyuncs.com/images/splash/splash-screen-ipad-portrait.png"
           media="screen and (min-device-width : 481px) and (max-device-width : 1024px) and (orientation : portrait)"/>
-    <link rel="apple-touch-startup-image" sizes="1536x2008" href="http://tiannblog.oss-cn-shanghai.aliyuncs.com/images/splash/splash-screen-ipad-portrait-retina.png"
+    <link rel="apple-touch-startup-image" sizes="1536x2008"
+          href="http://tiannblog.oss-cn-shanghai.aliyuncs.com/images/splash/splash-screen-ipad-portrait-retina.png"
           media="(device-width: 768px)	and (orientation: portrait)	and (-webkit-device-pixel-ratio: 2)"/>
-    <link rel="apple-touch-startup-image" sizes="1496x2048" href="http://tiannblog.oss-cn-shanghai.aliyuncs.com/images/splash/splash-screen-ipad-landscape-retina.png"
+    <link rel="apple-touch-startup-image" sizes="1496x2048"
+          href="http://tiannblog.oss-cn-shanghai.aliyuncs.com/images/splash/splash-screen-ipad-landscape-retina.png"
           media="(device-width: 768px)	and (orientation: landscape)	and (-webkit-device-pixel-ratio: 2)"/>
 
     <title>清汀驿站</title>
@@ -40,7 +53,7 @@
 
     <meta http-equiv="Content-Language" content="zh-CN">
     <meta name="keywords" content="在线工具">
-    <link rel="shortcut icon" href="http://tool.oschina.net/img/favicon.ico" type="image/x-icon">
+    <!--<link rel="shortcut icon" href="http://tool.oschina.net/img/favicon.ico" type="image/x-icon">-->
     <!--<script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.7.2/jquery.min.js"></script>-->
     <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/2.0.4/css/bootstrap.min.css">
     <script type="text/javascript">
@@ -52,13 +65,20 @@
 </head>
 <body>
 <style>
+    *, *::after, *::before {
+        box-sizing: content-box;
+    }
+
+    div {
+        overflow: visible;
+    }
+
     .wrapper {
         width: 1000px;
         margin: 0 auto;
     }
 
     #mainContent textarea, #mainContent input[type='text'] {
-        /*  定义textarea和input边框样式  */
         border: 1px solid #ccc;
         resize: none;
     }
@@ -72,7 +92,7 @@
     }
 
     #mainContent textarea {
-        width: 100%;
+        width: 650px;
         height: 150px;
     }
 
@@ -81,7 +101,8 @@
     }
 
     #right_area li {
-        height: 38px;
+        list-style: none;
+        height: 33px;
         font-size: 13pt;
     }
 </style>
@@ -100,17 +121,17 @@
 
     <!--弹出框-->
     <ul class="menu-top">
-        <li><a href="mainPage.html"><i class="fa fa-home"></i>主页<i class="fa fa-circle"></i></a>
+        <li><a href="../mainPage.html"><i class="fa fa-home"></i>主页<i class="fa fa-circle"></i></a>
         </li>
         <li>
-            <a class="has-submenu" href="#"><i class="fa fa-cog"></i>记-技术<i class="fa fa-plus active-plus"></i></a>
-            <ul class="submenu show-submenu">
-                <li class="active-menu">
-                    <a href="skill_fe.html"><i class="fa fa-angle-right"></i>前端<i class="fa fa-circle"></i></a>
+            <a class="has-submenu" href="#"><i class="fa fa-cog"></i>记-技术<i class="fa fa-plus"></i></a>
+            <ul class="submenu">
+                <li>
+                    <a href="../skill_fe.html"><i class="fa fa-angle-right"></i>前端<i class="fa fa-circle"></i></a>
                 </li>
-                <li><a href="skill_be.html"><i class="fa fa-angle-right"></i>后台<i class="fa fa-circle"></i></a>
+                <li><a href="../skill_be.html"><i class="fa fa-angle-right"></i>后台<i class="fa fa-circle"></i></a>
                 </li>
-                <li><a href="skill_others.html"><i class="fa fa-angle-right"></i>其他<i class="fa fa-circle"></i></a>
+                <li><a href="../skill_others.html"><i class="fa fa-angle-right"></i>其他<i class="fa fa-circle"></i></a>
                 </li>
             </ul>
         </li>
@@ -119,12 +140,12 @@
             <ul class="submenu">
                 <li><a href="travel_diary.html"><i class="fa fa-angle-right"></i>甜园<i class="fa fa-circle"></i></a>
                 </li>
-                <li><a href="travel_freeostage.html"><i class="fa fa-angle-right"></i>包邮区<i
+                <li><a href="../travel_freeostage.html"><i class="fa fa-angle-right"></i>包邮区<i
                         class="fa fa-circle"></i></a>
                 </li>
-                <li><a href="travel_morefar.html"><i class="fa fa-angle-right"></i>远一点吧<i class="fa fa-circle"></i></a>
+                <li><a href="../travel_morefar.html"><i class="fa fa-angle-right"></i>远一点吧<i class="fa fa-circle"></i></a>
                 </li>
-                <li><a href="travel_yearn.html"><i class="fa fa-angle-right"></i>向往地<i
+                <li><a href="../travel_yearn.html"><i class="fa fa-angle-right"></i>向往地<i
                         class="fa fa-circle"></i></a>
                 </li>
             </ul>
@@ -132,19 +153,19 @@
         <li>
             <a class="has-submenu" href="#"><i class="fa fa-coffee"></i>憩-憩息<i class="fa fa-plus"></i></a>
             <ul class="submenu">
-                <li><a href="rest_eating.html"><i class="fa fa-angle-right"></i>吃货<i class="fa fa-circle"></i></a></li>
-                <li><a href="rest_live.html"><i class="fa fa-angle-right"></i>会生活<i class="fa fa-circle"></i></a></li>
-                <li><a href="rest_videos.html"><i class="fa fa-angle-right"></i>动影<i class="fa fa-circle"></i></a>
+                <li><a href="../rest_eating.html"><i class="fa fa-angle-right"></i>吃货<i class="fa fa-circle"></i></a></li>
+                <li><a href="../rest_live.html"><i class="fa fa-angle-right"></i>会生活<i class="fa fa-circle"></i></a></li>
+                <li><a href="../rest_videos.html"><i class="fa fa-angle-right"></i>动影<i class="fa fa-circle"></i></a>
                 </li>
             </ul>
         </li>
         <li>
-            <a class="has-submenu" href="#"><i class="fa fa-cloud"></i>在线工具<i class="fa fa-plus"></i></a>
-            <ul class="submenu">
+            <a class="has-submenu" href="#"><i class="fa fa-cloud"></i>在线工具<i class="fa fa-plus active-plus"></i></a>
+            <ul class="submenu show-submenu">
                 <li><a href="#"><i class="fa fa-angle-right"></i>2048<i class="fa fa-circle"></i></a>
                 </li>
-                <li>
-                    <a href="#"><i class="fa fa-angle-right"></i>建设中<i class="fa fa-circle"></i></a>
+                <li class="active-menu">
+                    <a href="#"><i class="fa fa-angle-right"></i>正则在线测试<i class="fa fa-circle"></i></a>
                 </li>
                 <li>
                     <a href="#"><i class="fa fa-angle-right"></i>建设中<i class="fa fa-circle"></i></a>
@@ -157,12 +178,11 @@
     <!--弹出框-结束-->
 
     <div class="header">
-        <a href="mainPage.html" title="返回主页" class="header-logo">正则表达式测试</a>
+        <a href="../mainPage.html" title="返回主页" class="header-logo">正则测试</a>
         <a href="#" class="header-navigation show-navigation"><i class="fa fa-navicon"></i></a>
     </div>
     <div class="header-clear-big"></div>
 
-    <div class="">
 
         <div id="mainContent" class="wrapper">
             <div class="row-fluid">
@@ -177,13 +197,13 @@
                                                                         placeholder="在此输入正则表达式"
                                                                         class="input-xlarge">
                             </div>
-                            <label class="checkbox"><input type="checkbox" value="global" checked="checked"
-                                                           id="optionGlobal"
-                                                           name="optionGlobl">全局搜索</label>
-                            <label class="checkbox"><input type="checkbox" value="ignoreCase" id="optionIgnoreCase"
-                                                           name="optionIgnoreCase">忽略大小写</label>
-                            <a onclick="return onMatch();" class="btn btn-primary"><i
-                                    class="icon-chevron-down icon-white"></i>测试匹配</a>
+                            <label class="checkbox optionGlobal"><input type="checkbox" value="global" checked="checked"
+                                                                        id="optionGlobal"
+                                                                        name="optionGlobl">全局搜索</label>
+                            <label class="checkbox optionIgnoreCase"><input type="checkbox" value="ignoreCase"
+                                                                            id="optionIgnoreCase"
+                                                                            name="optionIgnoreCase">忽略大小写</label>
+                            <a id="onMatch" class="btn btn-primary">测试匹配</a>
                         </form>
                     </div>
                     <div class="bottomBar">
@@ -196,8 +216,7 @@
                                 <span class="add-on">替换文本</span><input type="text" id="textReplace" class="input-xlarge"
                                                                        placeholder="在此输入替换文本">
                             </div>
-                            <a onclick="return onReplace()" class="btn btn-primary"><i
-                                    class="icon-chevron-down icon-white"></i>替换</a>
+                            <a id="onReplace" class="btn btn-primary">替换</a>
                         </form>
                     </div>
                     <div class="bottomBar">
@@ -205,7 +224,7 @@
                         <textarea readonly="readonly" id="textReplaceResult"></textarea><br>
                     </div>
                 </div>
-                <div class="span4" id="right_area">
+                <div class="span4" id="right_area" style="width: 300px;">
                     <ul class="nav nav-list well">
                         <li class="nav-header">常用正则表达式</li>
                         <li><a href="#" title="[\u4e00-\u9fa5]">匹配中文字符</a></li>
@@ -234,7 +253,6 @@
             </div>
         </div>
 
-    </div>
 
     <!-- Page Footer-->
     <div class="footer">
@@ -242,7 +260,6 @@
             <a href="#" class="footer-share show-share-bottom"><i class="fa fa-share-alt"></i></a>
             <a href="#" class="footer-up"><i class="fa fa-angle-up"></i></a>
         </div>
-        <p class="center-text">Copyright 2015. All rights reserved.</p>
     </div>
 
     <!-- Share Elements-->
@@ -283,72 +300,96 @@
 </div>
 
 
-<!--<script language="javascript">-->
-<!--$(document).ready(function () {-->
-<!--$("#right_area li a").click(function () {-->
-<!--$("#textPattern").val($(this).attr("title"));-->
-<!--onMatch();-->
-<!--});-->
-<!--});-->
+<script language="javascript">
+    (function ($) {
 
-<!--function setVisible(idElement, visible) {-->
-<!--var obj = document.getElementById(idElement);-->
-<!--obj.style.visibility = visible ? "visible" : "hidden";-->
-<!--}-->
-<!--function isValidFields() {-->
-<!--var textSour = document.getElementById("textSour");-->
-<!--if (null == textSour.value || textSour.value.length < 1) {-->
-<!--textSour.focus();-->
-<!--// alert("请输入待匹配文本");-->
-<!--return false;-->
-<!--}-->
-<!--var textPattern = document.getElementById("textPattern");-->
-<!--if (null == textPattern.value || textPattern.value.length < 1) {-->
-<!--textPattern.focus();-->
-<!--// alert("请输入正则表达式");-->
-<!--return false;-->
-<!--}-->
-<!--return true;-->
-<!--}-->
-<!--function buildRegex() {-->
-<!--var op = "";-->
-<!--if (document.getElementById("optionGlobal").checked)op = "g";-->
-<!--if (document.getElementById("optionIgnoreCase").checked)op = op + "i";-->
-<!--return new RegExp(document.getElementById("textPattern").value, op);-->
-<!--}-->
-<!--function onMatch() {-->
-<!--if (!isValidFields())-->
-<!--return false;-->
-<!--document.getElementById("textMatchResult").value = "";-->
-<!--var regex = buildRegex();-->
-<!--var result = document.getElementById("textSour").value.match(regex);-->
-<!--if (null == result || 0 == result.length) {-->
-<!--document.getElementById("textMatchResult").value = "（没有匹配）";-->
-<!--return false;-->
-<!--}-->
-<!--if (document.getElementById("optionGlobal").checked) {-->
-<!--var strResult = "共找到 " + result.length + " 处匹配：\r\n";-->
-<!--for (var i = 0; i < result.length; ++i)strResult = strResult + result[i] + "\r\n";-->
-<!--document.getElementById("textMatchResult").value = strResult;-->
-<!--}-->
-<!--else {-->
-<!--document.getElementById("textMatchResult").value = "匹配位置：" + regex.lastIndex + "\r\n匹配结果：" + result[0];-->
-<!--}-->
-<!--return true;-->
-<!--}-->
-<!--function onReplace() {-->
-<!--var str = document.getElementById("textSour").value;-->
-<!--var regex = buildRegex();-->
-<!--document.getElementById("textReplaceResult").value = str.replace(regex, document.getElementById("textReplace").value);-->
-<!--}-->
-<!--function reset() {-->
-<!--$("#textSour").val("");-->
-<!--$("#textPattern").val("");-->
-<!--$("#textMatchResult").val("");-->
-<!--$("#textReplace").val("");-->
-<!--$("#textReplaceResult").val("");-->
-<!--}-->
-<!--</script>-->
+        $(document).ready(function () {
+            $("#right_area li a").click(function () {
+                $("#textPattern").val($(this).attr("title"));
+                onMatch();
+            });
+            changeColor();
+            $("#onMatch").click(onMatch);
+            $("#onReplace").click(onReplace);
+            $(".optionGlobal").click(changeColor);
+            $(".optionIgnoreCase").click(changeColor);
+        });
+
+        function setVisible(idElement, visible) {
+            var obj = document.getElementById(idElement);
+            obj.style.visibility = visible ? "visible" : "hidden";
+        }
+
+        function changeColor() {
+            if (document.getElementById("optionGlobal").checked) {
+                $(".optionGlobal").css("color", "red");
+            } else {
+                $(".optionGlobal").css("color", "");
+            }
+            if (document.getElementById("optionIgnoreCase").checked) {
+                $(".optionIgnoreCase").css("color", "red");
+            } else {
+                $(".optionIgnoreCase").css("color", "");
+            }
+        }
+
+        function isValidFields() {
+            var textSour = document.getElementById("textSour");
+            if (null == textSour.value || textSour.value.length < 1) {
+                textSour.focus();// alert("请输入待匹配文本");
+                return false;
+            }
+            var textPattern = document.getElementById("textPattern");
+            if (null == textPattern.value || textPattern.value.length < 1) {
+                textPattern.focus();// alert("请输入正则表达式");
+                return false;
+            }
+            return true;
+        }
+
+        function buildRegex() {
+            var op = "";
+            if (document.getElementById("optionGlobal").checked)op = "g";
+            if (document.getElementById("optionIgnoreCase").checked)op = op + "i";
+            return new RegExp(document.getElementById("textPattern").value, op);
+        }
+
+        function onMatch() {
+            if (!isValidFields())
+                return false;
+            document.getElementById("textMatchResult").value = "";
+            var regex = buildRegex();
+            var result = document.getElementById("textSour").value.match(regex);
+            if (null == result || 0 == result.length) {
+                document.getElementById("textMatchResult").value = "（没有匹配）";
+                return false;
+            }
+            if (document.getElementById("optionGlobal").checked) {
+                var strResult = "共找到 " + result.length + " 处匹配：\r\n";
+                for (var i = 0; i < result.length; ++i)strResult = strResult + result[i] + "\r\n";
+                document.getElementById("textMatchResult").value = strResult;
+            }
+            else {
+                document.getElementById("textMatchResult").value = "匹配位置：" + regex.lastIndex + "\r\n匹配结果：" + result[0];
+            }
+            return true;
+        }
+
+        function onReplace() {
+            var str = document.getElementById("textSour").value;
+            var regex = buildRegex();
+            document.getElementById("textReplaceResult").value = str.replace(regex, document.getElementById("textReplace").value);
+        }
+
+        function reset() {
+            $("#textSour").val("");
+            $("#textPattern").val("");
+            $("#textMatchResult").val("");
+            $("#textReplace").val("");
+            $("#textReplaceResult").val("");
+        }
+    }(jQuery));
+</script>
 
 </body>
 </html>
