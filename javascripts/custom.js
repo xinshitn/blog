@@ -625,7 +625,10 @@ function getExplorer() {
 
 /*各类分享功能*/
 function shareWeibo(title) {
-    window.event.preventDefault();
+    if (window.navigator.userAgent.indexOf("MSIE") > 0)
+        window.event.returnValue = false;
+    else
+        window.event.preventDefault();
     var p = {
         url: location.href,
         type: 'icon',
