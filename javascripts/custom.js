@@ -625,6 +625,7 @@ function getExplorer() {
 
 /*各类分享功能*/
 function shareWeibo(title) {
+    window.event.preventDefault();
     var p = {
         url: location.href,
         type: 'icon',
