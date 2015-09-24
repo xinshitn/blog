@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0 minimal-ui"/>
+    <title>MarkDown</title>
+</head>
+<style>
+    body {
+        font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+        font-size: 16px;
+        line-height: 1.42857143;
+        color: #333;
+        background-color: #fff;
+    }
+
+    a {
+        display: block;
+        text-decoration: none;
+        color: #1e90ff;
+    }
+
+    ul li {
+        line-height: 24px;
+    }
+
+    blockquote {
+        border-left: #eee solid 5px;
+        padding-left: 20px;
+    }
+
+    code {
+        color: #D34B62;
+        background: #F9F2F4;
+    }
+</style>
+<body>
+<div>
+    <a href="markDownToolPage.html">返回</a>
+    <textarea id="content" style="height:400px;width:600px;" onkeyup="compile()" placeholder="请在此输入MarkDown代码"></textarea>
+
+    <div id="result">将在此显示转换效果</div>
+</div>
+<script type="text/javascript" src="http://cdn.bootcss.com/showdown/1.2.3/showdown.min.js"></script>
+<script type="text/javascript">
+    function compile() {
+        var text = document.getElementById("content").value;
+        var converter = new showdown.Converter();
+        var html = converter.makeHtml(text);
+        document.getElementById("result").innerHTML = html;
+    }
+</script>
+</body>
+</html>

@@ -74,6 +74,7 @@
     <style>
         .wrapper {
             font-size: 16px;
+            margin-bottom: 10px;
         }
 
         #content {
@@ -89,6 +90,20 @@
             margin-top: 20px;
             padding: 10px 20px;
             background-color: #f8f8f8;
+        }
+
+        ul li {
+            line-height: 24px;
+        }
+
+        blockquote {
+            border-left: #eee solid 5px;
+            padding-left: 20px;
+        }
+
+        code {
+            color: #D34B62;
+            background: #F9F2F4;
         }
     </style>
 </head>
@@ -174,7 +189,7 @@
 
 
     <div id="mainContent" class="wrapper">
-        <textarea id="content" onkeyup="compile()" placeholder="请在此输入MarkDown代码"></textarea>
+        <textarea id="content" onkeyup="compile()" placeholder="请在此输入MarkDown代码，若要避免样式冲突，请点击右下角 蓝色按钮 进入无样式页面"></textarea>
 
         <div id="result">将在此显示转换效果</div>
     </div>
@@ -182,9 +197,10 @@
 
     <!-- Page Footer-->
     <div class="footer">
-        <div class="footer-socials two-bottom">
+        <div class="footer-socials three-bottom">
             <a href="#" class="footer-share show-share-bottom"><i class="fa fa-share-alt"></i></a>
             <a href="#" class="footer-up"><i class="fa fa-angle-up"></i></a>
+            <a href="markdown.html" class="footer-QQ" title="进入无样式页面（避免样式冲突）"><i class="fa fa-chain"></i></a>
         </div>
     </div>
 
