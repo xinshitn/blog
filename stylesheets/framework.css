@@ -654,7 +654,7 @@ a{
 .button-red:hover{		background-color:#e74c3c;}
 
 .light-3d{				border-bottom:solid 4px #868a8c;}
-.button-light{			background-color:#bdc3c7; color:#1f1f1f;}
+.button-light{			background-color:#bdc3c7; color:#FFFFFF;}
 .button-light:hover{	background-color:#ecf0f1;}
 
 .grey-3d{				border-bottom:solid 4px #474d4e;}
@@ -4704,3 +4704,49 @@ table tr:hover td{
 }
 
 
+/* 页码 */
+.page-bottom{
+	position:fixed;
+	width:100%;
+	max-width: 980px;
+	z-index:99999999999!important;
+	background-color:#f8f8f8;
+	padding-top:15px;
+	padding-bottom:15px;
+	border-top:solid 1px rgba(0,0,0,0.08);
+	-webkit-box-shadow: 0 0 0 0 rgba(0,0,0,0.1);
+	box-shadow: 0 0 0 0 rgba(0,0,0,0.1);
+	bottom:-350px;
+	transition:all 350ms ease;
+}
+
+.active-page-bottom{
+	-webkit-box-shadow: 0 -5px 15px 1px rgba(0,0,0,0.1)!important;
+	box-shadow: 0 -5px 15px 1px rgba(0,0,0,0.1)!important;
+	bottom:0px!important;
+	transition:all 350ms ease;
+}
+
+.close-page-bottom{
+	display:block;
+	text-align:center;
+	padding-top:15px;
+	margin-top:15px;
+	border-top:solid 1px rgba(0,0,0,0.05);
+	text-transform:uppercase;
+	font-size:12px;
+	font-weight:600;
+	color:#1f1f1f;
+	transition:all 250ms ease;
+}
+
+.close-page-bottom:hover{
+	color:rgba(0,0,0,0.6);
+	transition:all 250ms ease;
+}
+
+.one-page-button{
+	display:inline-block;
+	padding: 3px 10px;
+	color: #ffffff;
+}

@@ -15,6 +15,7 @@ var win_width;
         if (win_width >= 980) {
             $(".header").css("left", win_width / 2 - 490);
             $(".share-bottom").css("left", win_width / 2 - 490);
+            $(".page-bottom").css("left", win_width / 2 - 490);
         }
         try {
             if (typeof(eval(iniFun)) == "function") {
@@ -87,7 +88,6 @@ var win_width;
         };
 
         //Share Bottom Socials
-
         $('.show-share-bottom').click(function () {
             $('.share-bottom').toggleClass('active-share-bottom');
             return false;
@@ -96,6 +96,16 @@ var win_width;
         $('.close-share-bottom, .open-menu, .open-more').click(function () {
             $('.share-bottom').removeClass('active-share-bottom');
             return false;
+        });
+
+        //页码
+        $('.show-page-bottom').click(function () {
+            $('.page-bottom').toggleClass('active-page-bottom');
+            return false;
+        });
+
+        $("#mainDiv").click(function(){
+            $('.page-bottom').removeClass('active-page-bottom');
         });
 
         window.addEventListener('load', function () {
