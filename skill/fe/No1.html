@@ -93,7 +93,7 @@
     </div>
 
     <div class="header">
-        <a href="../../skill_be.html" title="返回" class="header-logo">返回</a>
+        <a href="../../skill_fe.html" title="返回" class="header-logo">返回</a>
         <!-- fa-arrow-right,fa-ban,fa-anchor -->
         <a href="#" class="header-navigation"><i class="fa fa-anchor"></i></a>
     </div>
@@ -101,176 +101,36 @@
 
     <div class="content">
         <div class="container no-bottom">
-            <h3 class="center-text">Java读取、创建xml（通过dom方式）</h3>
-            <p class="center-text">这个实例，应该可以满足一般的XML创建和解析需求了</p>
+            <h3 class="center-text">JS判断函数、变量是否存在</h3>
+            <p class="center-text">在写通用方法和全局变量的时候可能会用到的函数</p>
             <div class="decoration"></div>
-            <h5>创建一个接口：XmlInterface.java</h5>
+            <h5>比较简单，直接上代码：</h5>
 
 <pre>
-<code class="gline">//xml接口
-public interface XmlInterface {
-    /**
-    * 建立XML文档
-    * @param fileName 文件全路径名称
-    */
-    public void createXml(String fileName);
-    /**
-    * 解析XML文档
-    * @param fileName 文件全路径名称
-    */
-    public void parserXml(String fileName);
+<code class="gline">//是否存在指定函数
+function isExitsFunction(funcName) {
+    try {
+        if (typeof(eval(funcName)) == "function") {
+            return true;
+        }
+    } catch(e) {}
+    return false;
+}
+//是否存在指定变量
+function isExitsVariable(variableName) {
+    try {
+        if (typeof(variableName) == "undefined") {
+            //alert("value is undefined");
+            return false;
+        } else {
+            //alert("value is true");
+            return true;
+        }
+    } catch(e) {}
+    return false;
 }
 </code>
 </pre>
-            <h5>接口实现：XmlImpl.java</h5>
-<pre>
-<code class="gline">//接口实现
-package com.test.xml;
-
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.PrintWriter;
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.OutputKeys;
-import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerConfigurationException;
-import javax.xml.transform.TransformerException;
-import javax.xml.transform.TransformerFactory;
-import javax.xml.transform.dom.DOMSource;
-import javax.xml.transform.stream.StreamResult;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-import org.xml.sax.SAXException;
-
-public class XmlImpl implements XmlInterface{
-    private Document document;
-
-    public void init() {
-        try {
-            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-            DocumentBuilder builder = factory.newDocumentBuilder();
-            this.document = builder.newDocument();
-        } catch (ParserConfigurationException e) {
-            System.out.println(e.getMessage());
-        }
-    }
-
-    public void createXml(String fileName) {
-        Element root = this.document.createElement("scores");
-        this.document.appendChild(root);
-        Element employee = this.document.createElement("employee");
-        Element name = this.document.createElement("name");
-        name.appendChild(this.document.createTextNode("wangchenyang"));
-        employee.appendChild(name);
-        Element sex = this.document.createElement("sex");
-        sex.appendChild(this.document.createTextNode("m"));
-        employee.appendChild(sex);
-        Element age = this.document.createElement("age");
-        age.appendChild(this.document.createTextNode("26"));
-        employee.appendChild(age);
-        root.appendChild(employee);
-        TransformerFactory tf = TransformerFactory.newInstance();
-        try {
-            Transformer transformer = tf.newTransformer();
-            DOMSource source = new DOMSource(document);
-            transformer.setOutputProperty(OutputKeys.ENCODING, "gb2312");
-            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-            PrintWriter pw = new PrintWriter(new FileOutputStream(fileName));
-            StreamResult result = new StreamResult(pw);
-            transformer.transform(source, result);
-            System.out.println("生成XML文件成功!");
-        } catch (TransformerConfigurationException e) {
-            System.out.println(e.getMessage());
-        } catch (IllegalArgumentException e) {
-            System.out.println(e.getMessage());
-        } catch (FileNotFoundException e) {
-            System.out.println(e.getMessage());
-        } catch (TransformerException e) {
-            System.out.println(e.getMessage());
-        }
-    }
-
-    public void parserXml(String fileName) {
-        try {
-            DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-            DocumentBuilder db = dbf.newDocumentBuilder();
-            Document document = db.parse(fileName);
-
-            NodeList employees = document.getChildNodes();
-            for (int i = 0; i < employees.getLength(); i++) {
-                Node employee = employees.item(i);
-                NodeList employeeInfo = employee.getChildNodes();
-                for (int j = 0; j < employeeInfo.getLength(); j++) {
-                    Node node = employeeInfo.item(j);
-                    NodeList employeeMeta = node.getChildNodes();
-                    for (int k = 0; k < employeeMeta.getLength(); k++) {
-                        System.out.println(employeeMeta.item(k).getNodeName()
-                        + ":" + employeeMeta.item(k).getTextContent());
-                    }
-                }
-            }
-            System.out.println("解析完毕");
-        } catch (FileNotFoundException e) {
-            System.out.println(e.getMessage());
-        } catch (ParserConfigurationException e) {
-            System.out.println(e.getMessage());
-        } catch (SAXException e) {
-            System.out.println(e.getMessage());
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        }
-    }
-}
-</code>
-</pre>
-            <h5>测试</h5>
-<pre>
-<code class="gline">//测试方法入口
-public class Main {
-    public static void main(String args[]){
-        XmlImpl dd=new XmlImpl();
-        String str="D:/grade.xml";
-        dd.init();
-        dd.createXml(str);    //创建xml
-        dd.parserXml(str);    //读取xml
-    }
-}
-</code>
-</pre>
-            <h5>结果：</h5>
-            <h5>生成xml</h5>
-<pre>
-<code class="gline">//xml结果
-&lt;?xml version="1.0" encoding="GB2312"?&gt;
-&lt;scores&gt;
-    &lt;employee&gt;
-        &lt;name&gt;wangchenyang&lt;/name&gt;
-        &lt;sex&gt;m&lt;/sex&gt;
-        &lt;age&gt;26&lt;/age&gt;
-    &lt;/employee&gt;
-&lt;/scores&gt;
-</code>
-</pre>
-            <h5>读取xml</h5>
-<pre>
-<code class="gline">#text:
-
-name:wangchenyang
-#text:
-
-sex:m
-#text:
-
-age:26
-#text:
-</code>
-</pre>
-            <h5>解析完毕</h5>
         </div>
         <div class="decoration"></div>
     </div>
