@@ -716,3 +716,12 @@ function shareRenren(title, description) {
     }
     window.open("http://widget.renren.com/dialog/share?" + s.join('&'));
 }
+
+//百度统计
+var _hmt = _hmt || [];
+(function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?0a77f08c5c4bb1c7e6f57cbb20d851f7";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+})();
